@@ -1,6 +1,9 @@
 
-main: main.cpp
+main: main.cpp helper.o
 	g++ -o $@ $^
+
+helper.o: helper.cpp
+	g++ -c $^
 
 .PHONY: clean
 
